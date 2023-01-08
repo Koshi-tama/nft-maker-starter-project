@@ -32,7 +32,7 @@ const NftUploader = () => {
   };
 
   const imageToNFT = async (e) => {
-    const API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJkaWQ6ZXRocjoweDQzZGNiQjdjRTA1MjEzQkY0YWE3ZjI3M2Q0NUFCNTU3YThlQ2Q1YUEiLCJpc3MiOiJ3ZWIzLXN0b3JhZ2UiLCJpYXQiOjE2NzMxMzEwNjAwMTIsIm5hbWUiOiJ3ZWIzTkZUTWludCJ9.poLyrkOpyubCpca-PG8hOHacuCpkPfHTy7NtOrbEBfY";
+    const API_KEY = process.env.REACT_APP_WEB3_STOTAGE_API_KEY;
     const client = new Web3Storage({ token: API_KEY });
     const image = e.target;
     console.log(image);
